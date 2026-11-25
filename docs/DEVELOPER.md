@@ -50,8 +50,12 @@ Debug APK 可以直接裝上電話試，但唔可以用嚟上架 Play Store。
 
 1. 喺 Actions 搵最新成功嘅 `Build Android APK` run，確認 APK 冇問題
 2. 決定 tag（跟 `versionName`，例如 `v2.3.0`）
-3. `gh release create v2.3.0 app-debug.apk -R jackyson123/sen-kids-learning-android \
-     --title "SEN 兒童學習 Android App v2.3.0（Debug APK）" --notes-file notes.md`
+3. 將 APK 改名做 `sen-kids-learning-<version>-debug.apk`（例如 `sen-kids-learning-v2.3.0-debug.apk`），再出 release：
+   ```bash
+   cp app/build/outputs/apk/debug/app-debug.apk sen-kids-learning-v2.3.0-debug.apk
+   gh release create v2.3.0 sen-kids-learning-v2.3.0-debug.apk -R jackyson123/sen-kids-learning-android \
+       --title "SEN 兒童學習 Android App v2.3.0（Debug APK）" --notes-file notes.md
+   ```
 4. 開 release 頁面確認 asset 存在、可以下載
 
 ## 正式上架步驟（要用人手做，未做）
