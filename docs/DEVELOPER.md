@@ -41,6 +41,19 @@ echo "sdk.dir=/path/to/Android/sdk" > local.properties
 每次 push 到 `main`，workflow 會自動 build debug APK，喺 Actions 頁面下載。
 Debug APK 可以直接裝上電話試，但唔可以用嚟上架 Play Store。
 
+## 發佈 Release（比人下載 APK）
+
+最新 debug APK 會放喺 GitHub Release，畀人用手機直接下載安裝：
+<https://github.com/jackyson123/sen-kids-learning-android/releases/latest>
+
+出 release 步驟：
+
+1. 喺 Actions 搵最新成功嘅 `Build Android APK` run，確認 APK 冇問題
+2. 決定 tag（跟 `versionName`，例如 `v2.3.0`）
+3. `gh release create v2.3.0 app-debug.apk -R jackyson123/sen-kids-learning-android \
+     --title "SEN 兒童學習 Android App v2.3.0（Debug APK）" --notes-file notes.md`
+4. 開 release 頁面確認 asset 存在、可以下載
+
 ## 正式上架步驟（要用人手做，未做）
 
 1. **開 Google Play Console 帳戶**：一次性 $25 美金。用 Jack 嘅 Google 帳戶登記，

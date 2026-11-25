@@ -9,8 +9,10 @@ SEN 兒童學習係一個免費嘅廣東話兒童學習 app，專為有特殊學
 
 ## 下載安裝
 
-1. 去 [Actions](https://github.com/jackyson123/sen-kids-learning-android/actions) 下載最新嘅 debug APK（artifact 叫 `sen-kids-learning-debug-apk`）
-2. 喺 Android 手機安裝 APK 就可以用
+1. 去 [Releases](https://github.com/jackyson123/sen-kids-learning-android/releases/latest) 下載最新嘅 `app-debug.apk`
+2. 喺 Android 手機開個檔案安裝（要允許「安裝不明來源應用程式」）
+
+想試啱啱 push 嘅最新 build，可以去 [Actions](https://github.com/jackyson123/sen-kids-learning-android/actions) 下載 artifact `sen-kids-learning-debug-apk`。
 
 正式版會上架 Google Play，到時可以直接喺 Play Store 下載。
 
