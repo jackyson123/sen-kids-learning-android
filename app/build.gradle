@@ -31,4 +31,6 @@ android {
 dependencies {
     // Trusted Web Activity helper：將 https://sen-kids-learning.vercel.app/ 包成 Android app。
     implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
+    // AppCompat：styles.xml 用咗 Theme.AppCompat.Light.NoActionBar，冇呢個依賴會 build 失敗。
+    implementation 'androidx.appcompat:appcompat:1.7.0'
 }
